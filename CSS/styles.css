@@ -1,0 +1,49 @@
+#contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 400px 400px 400px 400px 400px 100px;
+  grid-template-areas:
+    "nav"
+    "encuentra"
+    "noticias"
+    "contacto"
+    "footer";
+}
+
+#header {
+  display: grid;
+}
+
+#divNosotros {
+  display: grid;
+  background-color: rgb(82,152,255);
+  width: 100%;
+  height: 500px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "img1 text1"
+    "text2 img2";
+}
+
+#nosotrosImg1 {
+  grid-area: img1;
+  margin: auto;
+  width: 60%;
+  }
+
+#divNosotrosOrganizaciones {
+  grid-area: text2;
+  text-align: center;
+}
+
+#divNosotrosEmpresas {
+  grid-area: text1;
+  text-align: center;
+}
+
+#nosotrosImg2 {
+  grid-area: img2;
+  margin: auto;
+  width: 60%;
+}
