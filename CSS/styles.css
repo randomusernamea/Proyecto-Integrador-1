@@ -2,23 +2,30 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px 400px 400px 400px 400px 400px 100px;
+ 
   grid-template-areas:
-    "nav"
-    "encuentra"
-    "noticias"
-    "contacto"
-    "footer";
+  "nav"
+  "actua"
+  "soluciones"
+  "encuentra"
+  "noticias"
+  "contacto"
+  "footer";
 }
 
 #header {
   display: grid;
 }
 
-#divNosotros {
+#divSoluciones {
   display: grid;
+  margin: 0;
+  grid-area: soluciones;
   background-color: rgb(82,152,255);
   width: 100%;
-  height: 500px;
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
+  height: 800px;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -26,24 +33,98 @@
     "text2 img2";
 }
 
-#nosotrosImg1 {
+#solucionesImg1 {
   grid-area: img1;
   margin: auto;
-  width: 60%;
+  width: 80%;
+  top:10%;
+  max-height: 80%;
   }
 
-#divNosotrosOrganizaciones {
+#divSolucionesOrganizaciones {
   grid-area: text2;
-  text-align: center;
+  color:white;
+  text-align: left;
+  display:grid;
+  grid-template-rows: 10% 15% 15% 15px 10% 1fr;
+  grid-template-areas:
+  "empty"
+  "title"
+  "text1"
+  "break"
+  "text2"
+  "empty2"
 }
-
-#divNosotrosEmpresas {
+#titleSolucionesOrganizaciones{
+  grid-area: title;
+}
+#textSolucionesOrganizaciones1{
   grid-area: text1;
-  text-align: center;
+}
+#textSolucionesOrganizaciones2{
+  grid-area: text2;
+}
+ #titleSolucionesEmpresas{
+   grid-area: title;
+ }
+#textSolucionesEmpresas1{
+  grid-area:text1;
+}
+#textSolucionesEmpresas2{
+  grid-area:text2;
+}
+ 
+#divSolucionesEmpresas {
+  grid-area: text1;
+  color: white;
+  text-align: left;
+  display:grid;
+  grid-template-rows: 20% 15% 3fr 2fr 15%;
+  grid-template-areas:"empty1"
+  "title"
+  "text1"
+  "text2"
+  "empty2"
 }
 
-#nosotrosImg2 {
+#solucionesImg2 {
   grid-area: img2;
   margin: auto;
-  width: 60%;
+  width: 80%;
+  height: 60%;
+  top:10%;
+}
+
+#divActua{
+  grid-area: actua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 60vh;
+  color: white;
+  background-image: linear-gradient(
+      0deg, 
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+  )
+  ,url("../Materiales/manos.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+#h2Actua{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-variant: normal;
+  font-weight: 100;
+  font-size: 2em;
+  margin-bottom: 10px;   
+}
+#pActua{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-variant: normal;
+  font-weight: 50;
+  font-size: 0.9em;
 }
