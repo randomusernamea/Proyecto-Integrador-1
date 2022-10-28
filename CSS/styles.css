@@ -4,7 +4,10 @@
   grid-template-rows: 100px 400px 400px 400px 400px 400px 100px;
   grid-template-areas:
     "nav"
+<<<<<<< HEAD
     "soluciones"
+=======
+>>>>>>> e7f52e14d53bc5042cce5d2b43a73076fa02ddb1
     "encuentra"
     "noticias"
     "contacto"
@@ -15,6 +18,7 @@
   display: grid;
 }
 
+<<<<<<< HEAD
 #divSoluciones {
   display: grid;
   margin: 0;
@@ -24,6 +28,13 @@
   font-size: 24px;
   font-family: Verdana, sans-serif;
   height: 800px;
+=======
+#divNosotros {
+  display: grid;
+  background-color: rgb(82,152,255);
+  width: 100%;
+  height: 500px;
+>>>>>>> e7f52e14d53bc5042cce5d2b43a73076fa02ddb1
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -31,6 +42,7 @@
     "text2 img2";
 }
 
+<<<<<<< HEAD
 #solucionesImg1 {
   grid-area: img1;
   margin: auto;
@@ -91,4 +103,26 @@
   width: 80%;
   height: 60%;
   top:10%;
+=======
+#nosotrosImg1 {
+  grid-area: img1;
+  margin: auto;
+  width: 60%;
+  }
+
+#divNosotrosOrganizaciones {
+  grid-area: text2;
+  text-align: center;
+}
+
+#divNosotrosEmpresas {
+  grid-area: text1;
+  text-align: center;
+}
+
+#nosotrosImg2 {
+  grid-area: img2;
+  margin: auto;
+  width: 60%;
+>>>>>>> e7f52e14d53bc5042cce5d2b43a73076fa02ddb1
 }
