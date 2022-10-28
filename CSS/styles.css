@@ -1,9 +1,15 @@
+body{
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
 #contenedor {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 400px 400px 400px 400px 400px 100px;
+  grid-template-rows: 100px 600px 800px 600px 400px 400px 100px;
   grid-template-areas:
     "nav"
+    "actua"
     "soluciones"
     "encuentra"
     "noticias"
@@ -24,23 +30,23 @@
   font-size: 24px;
   font-family: Verdana, sans-serif;
   height: 800px;
+  padding: 0 300px;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 200px 1fr 1fr 200px;
   grid-template-areas:
-    "img1 text1"
-    "text2 img2";
+    "emptyLeft img1 text1 emptyRight"
+    "emptyLeft text2 img2 emptyRight";
 }
 
 #solucionesImg1 {
   grid-area: img1;
-  margin: auto;
-  width: 80%;
-  top:10%;
+  width: 100%;
   max-height: 80%;
   }
 
 #divSolucionesOrganizaciones {
   grid-area: text2;
+  margin: 0 20px;
   color:white;
   text-align: left;
   display:grid;
@@ -75,6 +81,7 @@
 #divSolucionesEmpresas {
   grid-area: text1;
   color: white;
+  margin: 0 20px;
   text-align: left;
   display:grid;
   grid-template-rows: 20% 15% 3fr 2fr 15%;
@@ -87,8 +94,115 @@
 
 #solucionesImg2 {
   grid-area: img2;
-  margin: auto;
-  width: 80%;
+  width: 100%;
   height: 60%;
-  top:10%;
+}
+
+
+#divEncuentra{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 50px 100px 1fr;
+  grid-template-areas: 
+  "empty"
+  "title"
+  "text"
+  "buttons"
+}
+#encuentraTitle{
+  grid-area: title;
+  text-align:center;
+}
+#encuentraText{
+  grid-area: text;
+  text-align:center;
+}
+#divEncuentraMain{
+  grid-area: buttons;
+  display:grid;
+  margin: 0px 300px;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "voluntario donar reciclar llamados"
+}
+
+#encuentraVoluntario{
+  margin: 0px 20px;
+  grid-area: voluntario;
+  width:300px;
+  height:300px;
+  background-color: crimson;
+  border-radius: 30px;
+  display:grid;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas:
+  "icon void plus"
+  "empty empty empty"
+  "text text text"
+}
+
+#encuentraDonar{
+  margin: 0px 20px;
+  grid-area: donar;
+  width:300px;
+  height:300px;
+  background-color: gold;
+  border-radius: 30px;
+  display:grid;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas:
+  "icon void plus"
+  "empty empty empty"
+  "text text text"
+}
+
+#encuentraReciclar{
+  margin: 0px 20px;
+  grid-area: reciclar;
+  width:300px;
+  height:300px;
+  background-color: green;
+  border-radius: 30px;
+  display:grid;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas:
+  "icon void plus"
+  "empty empty empty"
+  "text text text"
+}
+
+#encuentraLlamados{
+  margin: 0px 20px;
+  grid-area: llamados;
+  width:300px;
+  height:300px;
+  background-color:cyan;
+  border-radius: 30px;
+  display:grid;
+  grid-template-rows: 1fr 50px 1fr;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas:
+  "icon void plus"
+  "empty empty empty"
+  "text text text"
+}
+
+.icon{
+  grid-area:icon;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.plusIcon{
+  grid-area:plus;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+.text{
+  grid-area:text;
+  color: white;
+  font-size: 34px;
+  margin-left: 20px;
 }
