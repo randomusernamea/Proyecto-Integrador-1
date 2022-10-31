@@ -280,7 +280,7 @@ padding-right: 300px;
 }
 .items-links-nosotros{
 padding-left: 100px;
-=======
+}
 
 
 #divNoticias{
@@ -325,8 +325,43 @@ padding-left: 100px;
 }
 
 .noticia{
-  height: 300px;
-  width: 200px;
+  height: 400px;
+  width: 250px;
+  color: black;
   /*testing bg*/
-  background-color: green;
+  background-color:bisque;
+  display: grid;
+  border-radius: 20px;
+  grid-template-rows: 150px 20px 20px 60px 1fr 10px;
+  grid-template-areas:
+  "img"
+  "dateTime"
+  "void"
+  "title"
+  "text"
+  "verMas" 
+}
+
+.noticiaTitle{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.noticiaFecha{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.noticiaFechaSubido{
+  display: grid;
+  grid-template-columns: 21px 1fr;
+  text-align: left;
+  vertical-align: text-top;
+}
+.noticiaFechaTexto{
+  margin:0;
+}
+
+.noticiaImg{
+  width: 250px;
+  height: 150px;
 }
