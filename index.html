@@ -167,22 +167,25 @@
                 <div class="noticiasButton" id="button2"></div>
                 <div class="noticiasButton" id="button3"></div>
             </div>
-
         </div>
-        <div id="contactoParent">
-            <img id="contactoImg">
-            <div id="contacto">
-                <h2 id="contactoTitle"></h2>
-                <form id="contactoForm">
-                    <label for="contactoName">Nombre:</label>
-                    <input type="text" id="contactoName" name="contactoName">
-                    <label for="contactoMail">Mail:</label>
-                    <input type="text" id="contactoMail" name="contactoMail">
-                    <label for="contactoMessage">Mensaje</label>
-                    <input type="text" id="contactoMessage" name="contactoMessage">
-                </form>
-                <button id="contactoEnvianr" type="submit" form="contactoForm" value="Submit">Enviar</button>
+        <section id="contact-form" >
+            <div class="container-img">
+                    <img class="img-cont" src="/Materiales/laptop-escritorio.jpg" alt="img-escritorio">
             </div>
+            <div class="form-contenedor"><h2 >Contacto</h2>
+                <form class="form-container"action="https://formspree.io/f/mqkjgbjg"
+                method="POST">
+                    <input type="text" class="form-input"  placeholder="Nombre" name="name">
+                    <div class="message-form">
+                        <textarea class="form-input form-input--message" placeholder="Mensaje"  name="message"></textarea>
+                    </div>
+                   <input type="email" class="form-input"  placeholder="Mail" name="email">
+                    <div class="but">
+                       <button class="contact-but" type="submit" >Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         </div>
         <footer id="footer">
             <div id="footerMain">    
