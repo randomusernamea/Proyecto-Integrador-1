@@ -310,20 +310,33 @@ padding-left: 100px;
 #noticiasMain{
   grid-area:news;
   display: grid;
-  grid-template-rows: 400px 1fr 1fr 1fr 1fr 400px;
+  grid-template-columns: 400px 1fr 1fr 1fr 1fr 400px;
   grid-template-areas: "emptyLeft noticia0 noticia1 noticia2 noticia3 emptyRight"
 }
 
 #noticiasSwitchButtons{
+  display: grid;
   grid-area: buttons;
-  grid-template-rows: 800px 1fr 1fr 1fr 800px;
+  grid-template-columns: 800px 1fr 1fr 1fr 800px;
   grid-template-areas: "leftEmpty button1 button2 button3 rightEmpty"
 }
 
-.button{
-  border-radius: 5px;
+.noticiasButton{
+  border-radius: 64px;
+  height:64px;
+  width: 64px;
+  background-color:slategrey;
 }
 
+#button1{
+  grid-area: button1;
+}
+#button2{
+  grid-area: button2;
+}
+#button3{
+  grid-area: button3;
+}
 .noticia{
   height: 400px;
   width: 250px;
