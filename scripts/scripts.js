@@ -1,30 +1,60 @@
 
 
+document.getElementById('ingresarButton').onclick =function() {ingresarAbrir()};
+document.getElementById('ingresarDivCerrar').onclick = function(){ingresarCerrar()};
 
-noticias = document.getElementsByClassName('noticia');
-agregarFechas();
-noticias[0].style.visibility = "visible";
-noticias[0].style.gridArea = '1 / 2 / span 1 / span 1';
-noticias[0].style.margin = '0 auto';
+function ingresarAbrir(){
+    darkener = document.getElementById('screenDarkener')
+    darkener.style.visibility = "visible";
+    darkener.style.zIndex = '1';
+    ingresarMain = document.getElementById('ingresarDiv');
+    ingresarMain.style.visibility = "visible";
+    ingresarMain.style.zIndex = '3';
+    
+}
 
-noticias[1].style.visibility = "visible";
-noticias[1].style.gridArea = '1 / 3 / span 1 / span 1';
-noticias[1].style.margin = '0 auto';
+function ingresarCerrar(){
+    darkener = document.getElementById('screenDarkener')
+    darkener.style.visibility = "hidden";
+    darkener.style.zIndex = '-1000';
+    ingresarMain = document.getElementById('ingresarDiv');
+    ingresarMain.style.visibility = "hidden";
+    ingresarMain.style.zIndex = '-1000';
+}
 
-noticias[2].style.gridArea = '1 / 4 / span 1 / span 1';
-noticias[2].style.margin = '0 auto';
 
-noticias[3].style.gridArea = '1 / 5 / span 1 / span 1';
-noticias[3].style.margin = '0 auto';
 
-noticias[4].style.visibility = "hidden";
-noticias[4].style.gridArea = '1 / 6 / span 1 / span 1';
-noticias[4].style.margin = '0 auto';
+initializeNoticias();
 
-noticias[5].style.visibility = "hidden";
-noticias[5].style.gridArea = '1 / 0 / span 1 / span 1';
-noticias[5].style.margin = '0 auto';
+function initializeNoticias(){
+    noticias = document.getElementsByClassName('noticia');
+    agregarFechas();
+    noticias[0].style.visibility = "visible";
+    noticias[0].style.gridArea = '1 / 2 / span 1 / span 1';
+    noticias[0].style.margin = '0 auto';
 
+    noticias[1].style.visibility = "visible";
+    noticias[1].style.gridArea = '1 / 3 / span 1 / span 1';
+    noticias[1].style.margin = '0 auto';
+
+    noticias[2].style.gridArea = '1 / 4 / span 1 / span 1';
+    noticias[2].style.margin = '0 auto';
+
+    noticias[3].style.gridArea = '1 / 5 / span 1 / span 1';
+    noticias[3].style.margin = '0 auto';
+
+    noticias[4].style.visibility = "hidden";
+    noticias[4].style.gridArea = '1 / 6 / span 1 / span 1';
+    noticias[4].style.margin = '0 auto';
+
+    noticias[5].style.visibility = "hidden";
+    noticias[5].style.gridArea = '1 / 0 / span 1 / span 1';
+    noticias[5].style.margin = '0 auto';
+
+    document.getElementById('button1').onclick =function() {switchNoticias(1)};
+document.getElementById('button2').onclick =function() {switchNoticias(2)};
+document.getElementById('button3').onclick =function() {switchNoticias(3)};
+}
 
 function agregarFechas(){
     noticiasDivFecha = document.getElementsByClassName('noticiaFecha');
@@ -70,9 +100,7 @@ function timeSince(date) {
     return toReturn;
 }
 
-document.getElementById('button1').onclick =function() {switchNoticias(1)};
-document.getElementById('button2').onclick =function() {switchNoticias(2)};
-document.getElementById('button3').onclick =function() {switchNoticias(3)};
+
 
 
 function switchNoticias(number){

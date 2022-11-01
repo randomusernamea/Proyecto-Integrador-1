@@ -131,7 +131,7 @@ body{
   grid-area: voluntario;
   width:300px;
   height:300px;
-  background-color: crimson;
+  background-color: #dc143c;
   border-radius: 30px;
   display:grid;
   grid-template-rows: 1fr 50px 1fr;
@@ -264,9 +264,10 @@ font-weight: 800;
 padding-right: 10px;
 margin-right: 100px;
 }
-span{
+#ingresarButton{
 display: inline-block;
 justify-self: center;
+cursor:pointer; 
 padding: 8px 50px  ;
 background-color: rgb(82,39,204);
 color: white;
@@ -377,4 +378,138 @@ padding-left: 100px;
 .noticiaImg{
   width: 250px;
   height: 150px;
+}
+
+#ingresarDiv{
+
+}
+
+#screenDarkener{
+  z-index: -1000;
+  visibility:hidden;
+  top:0;
+  left:0;
+  position:fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+}
+
+#ingresarDiv{
+  height: 800px;
+  width: 1000px;
+  position:fixed;
+  z-index: -1000;
+  left:50%;
+  top: 50%;
+  margin-top: -400px;
+  margin-left:-500px;
+  visibility: hidden;
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img main";
+  border-radius: 40px;
+}
+
+#ingresarDivImg{
+  height:800px;
+  width:500px;
+  grid-area:img;
+  border-radius: 40px 0 0 40px;
+}
+
+#ingresarDivStuff{
+  background-color: beige;
+  width: 500px;
+  display:grid;
+  grid-template-columns: 1fr 32px;
+  grid-template-rows: 32px 50px 1fr 1fr;
+  border-radius: 0 40px 40px 0;
+  grid-template-areas:
+  "volver cerrar"
+  "registrar registrar"
+  "empresa empresa"
+  "organizacion organizacion"
+}
+
+#volver{
+  color:dimgray;
+  grid-area: volver;
+}
+#ingresarDivCerrar{
+  z-index: 4;
+  height:32px;
+  width:32px;
+  position: relative;
+  top:16px;
+  right:16px;
+  cursor:pointer; 
+}
+
+#ingresarDivTitle{
+  font-weight: 700;
+  font-size: 32px;
+  text-align:center;
+  grid-area:registrar;
+}
+
+.ingresarDivItem{
+  border-radius:10px;
+  height: 150px;
+  margin:auto;
+  width: 400px;
+  display:grid; 
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 2fr 3fr 20px;
+  grid-template-areas: 
+  "icon title"
+  "icon text"
+  "icon flecha"
+}
+
+#ingresarDivEmpresa{
+  grid-area:empresa;
+}
+#ingresarDivOrganizacion{
+  grid-area:organizacion;
+}
+
+#ingresarDivEmpresaIcon{
+  background-color:rgb(82,152,255);
+}
+
+#ingresarDivOrganizacionIcon{
+  background-color:blueviolet;
+}
+.ingresarDivIcon{
+  width:100%;
+  height:100%;
+  grid-area:icon;
+  border-radius: 10px 0 0 10px;
+}
+
+.ingresarDivFlechaDiv{
+  height:10px;
+  grid-area:flecha;
+}
+.ingresarDivFlecha{
+  position: relative;
+  left:240px;
+}
+
+#ingresarDivIconImgEmpresa{
+  height:32px;
+  width:32px;
+}
+
+#ingresarDivIconImgOrganizacion{
+  height:32px;
+  width:32px;
+}
+
+.ingresarDivIconImgDiv{
+  margin:auto;
+  margin-top:50%;
+  width:32px;
+  height:32px;
 }
