@@ -581,6 +581,118 @@ div .contact-but:hover{
   grid-template-rows: repeat(4, 100px);
   grid-template-columns: repeat(2, 1fr)
 }
+#footer{
+  grid-area: footer;
+  background: #7749f8;
+  padding: 20px 0px;
+  font-family:'DM Sans', sans-serif;
 
+}
+#footerMain{
+  
+  border-top: 1px solid #b3b3b3;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #b3b3b3;
+}
+#footerImgNexos{
+
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 70px;
+}
+#footerNexos{
+  display: inline-flex;
+}
+#footerLinks{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+a{
+  color: white;
+  font-weight: 500;
+}
+.link-nos:hover{
+color: #000000;
+text-decoration:underline;
+}
+.link-noti:hover{
+  color: #000000;
+text-decoration:underline;
+}
+.link-cont:hover{
+  color: #000000;
+text-decoration:underline;
+}
+.link-terms:hover{
+  color: #000000;
+text-decoration:underline;
+}
+#footerSocialMediaLinks{
+width: 250px;
+height: 50px;
+background: #5227cc;
+border-radius: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+position: relative;
+cursor: pointer;
+transition: .3s linear;
+}
+#footerSocialMediaLinks:hover{
+  transform: scale(1.1);
+}
+#footerSocialMediaLinks span{
+  position: absolute;
+  width: 100%;
+  background:#20124675 ;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 30px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+}
+#footerSocialMediaLinks span:hover{
+  transform: translateX(-100%);
+  transition-delay: .3s ;
+}
+#footerSocialMediaLinks a{
+  /* flex: 1; */
+
+  color: #d1ccdd;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: .3s linear;
+}
+#footerSocialMediaLinks:hover a{
+  opacity: 1;
+  transform: translateX(0);
+}
+#footerSocialMediaLinks a:nth-of-type(1){
+  transition-delay: 1s;
+}
+#footerSocialMediaLinks a:nth-of-type(2){
+  transition-delay: 0.8s;
+}
+#footerSocialMediaLinks a:nth-of-type(3){
+  transition-delay: 0.6s;
+}
+.link{
+  margin-left: 800px;
+  margin-top: 20px;
+}
+#copyright{
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
 
 
