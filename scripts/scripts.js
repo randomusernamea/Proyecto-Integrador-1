@@ -27,7 +27,7 @@ function ingresarCerrar(){
 initializeNoticias();
 
 function initializeNoticias(){
-    if (document.documentElement.clientWidth> 500){
+    if (window.innerWidth > 500){
         noticias = document.getElementsByClassName('noticia');
         agregarFechas();
         noticias[0].style.visibility = "visible";
@@ -53,8 +53,8 @@ function initializeNoticias(){
         noticias[5].style.margin = '0 auto';
     }
     document.getElementById('button1').onclick =function() {switchNoticias(1)};
-document.getElementById('button2').onclick =function() {switchNoticias(2)};
-document.getElementById('button3').onclick =function() {switchNoticias(3)};
+    document.getElementById('button2').onclick =function() {switchNoticias(2)};
+    document.getElementById('button3').onclick =function() {switchNoticias(3)};
 }
 
 function agregarFechas(){

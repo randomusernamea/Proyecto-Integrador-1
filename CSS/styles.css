@@ -6,7 +6,7 @@ body{
 #contenedor {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 600px 800px 600px 800px 600px 100px;
+  grid-template-rows: 100px 600px 1000px 600px 800px 600px 100px;
   grid-template-areas:
     "nav"
     "actua"
@@ -28,8 +28,8 @@ body{
   background-color: rgb(82,152,255);
   font-size: 24px;
   font-family: Verdana, sans-serif;
-  height: 800px;
-  padding: 0 0 0 300px;
+  height: 1000px;
+  padding: 0 0 0 0;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 200px 1fr 1fr 200px;
   grid-template-areas:
@@ -180,7 +180,7 @@ body{
   grid-area: llamados;
   width:300px;
   height:300px;
-  background-color:cyan;
+  background-color:rgb(23,162, 184);
   border-radius: 30px;
   display:grid;
   grid-template-rows: 1fr 50px 1fr;
@@ -588,6 +588,8 @@ div .contact-but:hover{
   background: #7749f8;
   padding: 20px 0px;
   font-family:'DM Sans', sans-serif;
+  width:1960px;
+  /*no se porque esto quedaba corto con 100%, es un fix que anda, no pregunten*/
 
 }
 #footerMain{
@@ -699,31 +701,29 @@ transition: .3s linear;
 
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 390px){
 
   #contenedor{
                        /* nav  actua solus encue notici contac footer*/
-    grid-template-rows: 200px 400px 2200px 1800px 2200px 500px 400px;
-    grid-areas:
-    "nav"
-    "actua"
-    "soluciones"
-    "encuentra"
-    "noticias"
-    "contacto"
-    "footer";
+    grid-template-rows: 200px 400px 1800px 1800px 2200px 500px 400px;
+    grid-areas: "asd" "asdq" "vwgq" "asvbn" "debar" "asbew" "hrw" "ebq"
   }                   /* nav  actua solus notici contac footer*/
+
+  
+
   #header{
     height:200px;
 
   }
+
+
   #divSoluciones{
-    width: 384px;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-area: soluciones;
     padding:0;
     height: 1800px;
-    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-rows: 300px 500px 300px 300px;
     grid-template-areas: 
     "img1"
     "text1"
@@ -731,8 +731,26 @@ transition: .3s linear;
     "text2";
     margin-left: 0px;
   }
+
+  #divSolucionesOrganizaciones{
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+    "title"
+    "text1"
+    "text2"
+  }
+
+  #divSolucionesEmpresas{
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas: 
+    "title"
+    "text1"
+    "text2"
+  }
+
+
 #divEncuentra{
-  width: 384px;
+  width: 100%;
   grid-template-rows: 100px 150px 300px 1fr;
 
   }
@@ -748,7 +766,7 @@ transition: .3s linear;
     "llamados"
   }
   #divNoticias{
-    width: 384px;
+    width: 100%;
     grid-template-rows: 30px 30px 1400px 1fr;
     grid-template-areas: 
     "title"
@@ -775,29 +793,104 @@ transition: .3s linear;
     flex-direction: column;
   }
   #head-container{
-    display:none;
+    width: 100%;
+    margin:0;
+    flex-direction: column;
   }
-  #divActua{
-    margin: 0;
-    background-size: 500px 384px;
+  #ingresarButton{
+    display: block;
+    padding:0;
+    margin: auto;
+    width: 200px;
   }
 
+  #divActua{
+    margin: 0;
+    background-size: 500px 100%;
+    width:100%;
+  }
+
+
+  .form-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 50px 200px;
+  }
   #contact-form{
-    width: 384px;
+    width: 100%;
+    flex-direction: column;
   }
   #footer{
     display:none;
   }
 
-
-
+  .form-input{
+    border-radius: 15px;
+    padding: 10px;
+    color: #5298ff;
+    border: 1px solid #0da2ff;
+    caret-color: #0da2ff;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    margin:0;
+    padding:0;
+  }
+  .items-links-ayuda{
+    padding-right: 0;
+    margin: auto;
+  }
+  .items-links-nosotros{
+    padding-left: 0;
+    margin: auto;
+  }
+  .items-links-noticias{
+    margin: auto;
+  }
 
 
 
   #encuentraText{
-    width: 384px;
+    width: 100%;
   }
   #encuentraTitle{
-    width: 384px;
+    width: 100%;
+  }
+  #ingresarDiv{
+    height: 844px;
+    width: 100%;
+    position:fixed;
+    z-index: -1000;
+    left:0;
+    top: 0;
+    margin-top: 0px;
+    margin-left:0px;
+    visibility: hidden;
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main";
+    border-radius: 0;
+  } 
+  #ingresarDivImg{
+    display:none;
+  }
+  #ingresarDivStuff{
+    width:100%;
+  }
+
+  .img-cont {
+    padding:0;
+    width:100%;
+  }
+
+  .img-logo{
+    display: flex;
+    align-items: center;
+    margin:auto;
+    height: 40px;
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    
   }
 }
+
