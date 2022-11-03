@@ -658,7 +658,7 @@ transition: .3s linear;
   background:#20124675 ;
   color: #f1f1f1;
   text-align: center;
-  line-height: 30px;
+  line-height: 70px;
   z-index: 999;
   transition: .6s linear;
   border-radius: 40px;
@@ -697,6 +697,23 @@ transition: .3s linear;
   display: flex;
   justify-content: center;
   font-size: 12px;
+}
+
+.facebook{
+  margin: 0 0;
+  padding: 0 10px ;
+}
+.twitter{
+  margin: 0 0;
+  padding: 0 10px ;
+}
+.instagram{
+  margin: 0 0;
+  padding: 0 10px ;
+}
+.link{
+  margin-left: 800px;
+  margin-top: 20px;
 }
 
 
