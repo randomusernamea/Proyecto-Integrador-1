@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./CSS/styles.css" rel="stylesheet">
+    <link href="/CSS/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="contenedor">
-        <header id="header">
-            <nav>
-                <img id="nexosImg"></img>
-                <div id="divHeaderNosotros"></div>
-                <div id="divHeaderNoticias"></div>
-                <div id="divHeaderAyuda"></div>
-                <div id="divHeaderIngresar"></div>
+        <header id="head-container">
+            <div>
+                <img src="/Materiales/logo.png" alt="logoNexo" class="img-logo">
+            </div>
+            <nav class="nav-container">
+                        <a href="#divSoluciones" class="items-links-nosotros">Nosotros</a>
+                        <a href="#divNoticias" class="items-links-noticias  ">Noticias</a>
+                        <a href="#contact-form" class="items-links-ayuda">Ayuda</a>
+                        <a class="items-links" id="ingresarButton"><span>Ingresar</span></a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <section id="divActua">
@@ -39,53 +46,211 @@
             <img id="solucionesImg2" src="Materiales/voluntariado.jpg">
         </div>
         <div id="divEncuentra">
-            <h2 id="encuentraTitle"></h2>
-            <p id="encuentraText"></p>
-            <div id="encuentraVoluntario"></div>
-            <div id="encuentraDonar"></div>
-            <div id="encuentraReciclar"></div>
-            <div id="encuentraLlamados"></div>
-        </div>
-        <div id="divNoticias"></div>
-        <div id="contactoParent">
-            <img id="contactoImg">
-            <div id="contacto">
-                <h2 id="contactoTitle"></h2>
-                <form id="contactoForm">
-                    <label for="contactoName">Nombre:</label>
-                    <input type="text" id="contactoName" name="contactoName">
-                    <label for="contactoMail">Mail:</label>
-                    <input type="text" id="contactoMail" name="contactoMail">
-                    <label for="contactoMessage">Mensaje</label>
-                    <input type="text" id="contactoMessage" name="contactoMessage">
-                </form>
-                <button id="contactoEnvianr" type="submit" form="contactoForm" value="Submit">Enviar</button>
+            <h2 id="encuentraTitle">Encuentra las mejores oportunidades</h2>
+            <p id="encuentraText">La plataforma cuenta con gran variedad de proyectos locales (sociales, educativos y medioambientales), donde <br>
+            encontraras el que mejor se adapte a la experiencia que estas buscando. <br>
+        Te ayudamos en la coordinacion con la organizacion de forma simple y rapida.</p>
+            <div id="divEncuentraMain">
+                <div id="encuentraVoluntario">
+                    <img src="/Materiales/icono-mano.png" class="icon">
+                    <img src="Materiales/icono-mas.png" class="plusIcon">
+                    <div class="text">Ser voluntario</div>
+                </div>
+                <div id="encuentraDonar">
+                    <img src="Materiales/icono-mano-corazon.png" class="icon">
+                    <img src="Materiales/icono-mas.png" class="plusIcon">
+                    <div class="text">Donar</div>
+                </div>
+                <div id="encuentraReciclar">
+                    <img src="Materiales/icono-reciclar.png" class="icon">
+                    <img src="Materiales/icono-mas.png" class="plusIcon">
+                    <div class="text">Reciclar</div>
+                </div>
+                <div id="encuentraLlamados">
+                    <img src="Materiales/icono-maletin.png" class="icon">
+                    <img src="Materiales/icono-mas.png" class="plusIcon">
+                    <div class="text">Llamados <br>laborales</div>
+                </div>
             </div>
+        </div>
+        <div id="divNoticias">
+            <h2 id="noticiasTitle">Noticias</h2>
+            <p id="noticiasText">Ver todas</p>
+            <div id="noticiasMain">
+                <div id="noticia1" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia1.png">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>No lo vas a creer!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui maxime eius suscipit voluptas atque commodi voluptates itaque veniam consectetur nisi.</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+                <div id="noticia2" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia2.png">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>Imposible lo que paso!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quae consectetur ex eius excepturi quod beatae? Illum consequuntur reiciendis quisquam.</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+                <div id="noticia3" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia3.png">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>Nunca antes visto!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sequi cum quia quas aliquam molestias maxime tempore nulla amet. Ducimus!</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+                <div id="noticia4" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia4.png">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>Increible secreto descubierto!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi optio asperiores exercitationem expedita. Corporis eveniet, illum molestiae ad tenetur nam!</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+                <div id="noticia5" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia5.jpg">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>Ha sido expuesto!!!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus non minus quasi sequi ducimus libero minima ex quidem? Odio, excepturi.</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+                <div id="noticia6" class="noticia">
+                    <img class="noticiaImg" src="/Materiales/noticia6.jpg">
+                    <div class="noticiaFecha">
+                        <div class="noticiaFechaSubido">
+                            <img class="noticiaCalendario" src="/Materiales/icono-calendario.png">
+                            <p class="noticiaFechaTexto">2022-10-31</p>
+                        </div>
+                        <div class="noticiaTiempoDesdeSubido"></div>
+                    </div>
+                    <div class="noticiaVoid"></div>
+                    <div class="noticiaTitle"><p>Lo que realmente paso!</p></div>
+                    <div class="noticiaText"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate exercitationem debitis eum eius id ducimus repudiandae porro odio libero?</p></div>
+                    <div class="noticiaVerMas"></div>
+                </div>
+            </div>
+            <div id="noticiasSwitchButtons">
+                <div class="noticiasButton" id="button1"></div>
+                <div class="noticiasButton" id="button2"></div>
+                <div class="noticiasButton" id="button3"></div>
+            </div>
+        </div>
+        <section id="contact-form" >
+            <div class="container-img">
+                    <img class="img-cont" src="/Materiales/laptop-escritorio.jpg" alt="img-escritorio">
+            </div>
+            <div class="form-contenedor"><h2 >Contacto</h2>
+                <form class="form-container"action="https://formspree.io/f/mqkjgbjg"
+                method="POST">
+                    <input type="text" class="form-input"  placeholder="Nombre" name="name">
+                    <div class="message-form">
+                        <textarea class="form-input form-input--message" placeholder="Mensaje"  name="message"></textarea>
+                    </div>
+                   <input type="email" class="form-input"  placeholder="Mail" name="email">
+                    <div class="but">
+                       <button class="contact-but" type="submit" >Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         </div>
         <footer id="footer">
             <div id="footerMain">    
-                <div id="footerNexos">
-                    <img id="footerImgNexos">
-                </div>
+                <section id="footerNexos">
+                    <img src="/Materiales/logo-blanco.png" alt="logo.white" id="footerImgNexos">
                 <div id="footerLinks">
-                    <div>Nosotros</div>
-                    <div>Noticias</div>
-                    <div>Contacto</div>
-                    <div>Terminos y Condiciones</div>
+                    <a href="#" class="link-nos emergencyName">Nosotros</a>
+                    <a href="#" class="link-noti emergencyName">Noticias</a>
+                    <a href="#" class="link-cont emergencyName">Contacto</a>
+                    <a href="#" class="link-terms emergencyName">Terminos y Condiciones</a>
                 </div>
-                <div id="footerSocialMediaLinks">
-                    <div id="fsmlt">Seguinos!</div>
-                    <div id="fsmli">
-                        <img id="footerImgFace">
-                        <img id="footerImgTwitter">
-                        <img id="footerImgInsta">
-                    </div>
+                <aside class="link">
+                    <div id="footerSocialMediaLinks">
+                        <span><i class="seguinos"></i>Seguinos!</span>
+                        <a href="#" class="instagram emergencyName"><img src="/Materiales/instagram.png" alt="instagram-icon"></a>
+                        <a href="#" class="facebook emergencyName"><img src="/Materiales/facebook.png" alt="facebook-icon"></a>
+                        <a href="#"class="twitter emergencyName"><img src="/Materiales/Twitter.png" alt="twitter-icon"></a>
+                        </div>
+                    </aside>
+                </section>
+                
                 </div>
             </div>
         <div id="copyright">
             Lorem, ipsum.
         </div>
         </footer>
+
     </div>
+    <div id="ingresarDiv">
+        <img id="ingresarDivImg" src="/Materiales/imagen-modal.JPG">
+        <div id="ingresarDivStuff">
+            <div id="volver">
+                <img src="Materiales/icono-flecha.png">
+                <span>Volver Atras</span>
+            </div>
+            <img id="ingresarDivCerrar" src="/Materiales/x-icon.jpg">
+            <p id="ingresarDivTitle">Registrar</p>
+            <div class="ingresarDivItem" id="ingresarDivEmpresa">
+                <div class="ingresarDivIcon" id="ingresarDivEmpresaIcon">
+                    <div class="ingresarDivIconImgDiv">
+                        <img class="ingresarDivIconImg" id="ingresarDivIconImgEmpresa" src="Materiales/icono-maletin.png">
+                    </div>
+                </div>
+                <p class="ingresarDivTitle" id="ingresarDivEmpresaTitle">MI EMPRESA</p>
+                <p class="ingresarDivText" id="ingresarDivEmpresaText">Breve explicacion de lo que nos referimos</p>
+                <div class="ingresarDivFlechaDiv">
+                    <img src="/Materiales/icono-flecha.png" class="ingresarDivFlecha">
+                </div>
+            </div>
+            <div class="ingresarDivItem" id="ingresarDivOrganizacion">
+                <div class="ingresarDivIcon" id="ingresarDivOrganizacionIcon">
+                    <div class="ingresarDivIconImgDiv">
+                        <img class="ingresarDivIconImg" id="ingresarDivIconImgEmpresa" src="Materiales/icono-persona.png">
+                    </div>
+                </div>
+                <p class="ingresarDivTitle" id="ingresarDivOrganizacionTitle">MI ORGANIZACION</p>
+                <p class="ingresarDivText" id="ingresarDivOrganizacionText">Estamos para ayudarlos a tener exito</p>
+                <div class="ingresarDivFlechaDiv">
+                    <img src="/Materiales/icono-flecha.png" class="ingresarDivFlecha" src="/Materiales/icono-flecha.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="screenDarkener"></div>
+    <script src="/scripts/scripts.js"></script>
 </body>
 </html>
